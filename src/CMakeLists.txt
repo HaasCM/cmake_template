@@ -14,3 +14,5 @@ add_executable(application ${SOURCE_FILES})
 target_link_libraries(application app)
 
 install(TARGETS application DESTINATION bin)
+
+
