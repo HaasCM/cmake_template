@@ -20,6 +20,6 @@ include_directories(app)
 add_executable(application ${SOURCE_FILES})
 target_link_libraries(application app)
 
-install(TARGETS application DESTINATION bin)
+install(TARGETS application DESTINATION {CMAKE_INSTALL_PREFIX}/bin)
 
 

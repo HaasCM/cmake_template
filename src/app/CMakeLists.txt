@@ -17,5 +17,5 @@ add_library(app SHARED ${SOURCE_FILES} ${HEADER_FILES})
 
 set_target_properties(appStatic PROPERTIES OUTPUT_NAME app)
 
-install(TARGETS app DESTINATION lib)
-install(FILES ${HEADER_FILES} DESTINATION include/app)
+install(TARGETS app DESTINATION {CMAKE_INSTALL_PREFIX}/lib)
+install(FILES ${HEADER_FILES} DESTINATION {CMAKE_INSTALL_PREFIX}/include/app)
