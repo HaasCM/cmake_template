@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.2)
 project(app C CXX)
 
+if(NOT DEFINED PROJECT_ROOT_DIR)
+    set(PROJECT_ROOT_DIR ${PROJECT_SOURCE_DIR}/../..)
+endif(NOT DEFINED PROJECT_ROOT_DIR)
+
+include(${PROJECT_ROOT_DIR}/cmake_modules/uninstall.cmake)
+
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 set(SOURCE_FILES app.cpp)
